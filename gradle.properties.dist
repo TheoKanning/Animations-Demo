@@ -1,0 +1,5 @@
+# Copy these properties to your gradle.properties, and replace with the proper release signing configs
+# suppress inspection "UnusedProperty" for whole file
+releaseKeystorePassword=PASSWORD
+releaseKeyAlias=ALIAS
+releaseKeyPassword=PASSWORD
