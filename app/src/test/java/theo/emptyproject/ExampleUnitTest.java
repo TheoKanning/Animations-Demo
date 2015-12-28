@@ -1,4 +1,4 @@
-package theo.base;
+package theo.animationsdemo;
 
 import org.junit.Test;
 

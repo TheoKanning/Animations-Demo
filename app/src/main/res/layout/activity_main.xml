@@ -35,24 +35,40 @@
 
             <Button
                 android:id="@+id/animators"
+                android:background="@color/animators"
                 android:text="@string/animators"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/abc_text_size_title_material" />
             <Button
                 android:id="@+id/transitions"
+                android:background="@color/transitions"
                 android:text="@string/transitions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/abc_text_size_title_material" />
             <Button
                 android:id="@+id/frame_animations"
+                android:background="@color/frameAnimations"
                 android:text="@string/frame_animations"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/abc_text_size_title_material" />
             <Button
                 android:id="@+id/morphing"
+                android:background="@color/morphing"
                 android:text="@string/morphing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/abc_text_size_title_material" />
 
         </LinearLayout>
 

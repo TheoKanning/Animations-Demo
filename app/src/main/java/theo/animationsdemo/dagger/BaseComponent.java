@@ -1,4 +1,4 @@
-package theo.base.dagger;
+package theo.animationsdemo.dagger;
 
 import android.app.Application;
 

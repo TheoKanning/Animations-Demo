@@ -1,11 +1,12 @@
-package theo.base.ui.activity;
+package theo.animationsdemo.ui.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import theo.base.R;
+import theo.animationsdemo.R;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

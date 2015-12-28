@@ -1,11 +1,11 @@
-package theo.base;
+package theo.animationsdemo;
 
 
 import android.app.Application;
 
-import theo.base.dagger.BaseComponent;
-import theo.base.dagger.BaseModule;
-import theo.base.dagger.DaggerBaseComponent;
+import theo.animationsdemo.dagger.BaseComponent;
+import theo.animationsdemo.dagger.BaseModule;
+import theo.animationsdemo.dagger.DaggerBaseComponent;
 
 public class BaseApplication extends Application {
 

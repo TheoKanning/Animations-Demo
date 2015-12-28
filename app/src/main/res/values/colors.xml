@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="animators">#4CAF50</color>
+    <color name="animatorsLight">#A5D6A7</color>
+    <color name="transitions">#2196F3</color>
+    <color name="transitionsLight">#90CAF9</color>
+    <color name="frameAnimations">#673AB7</color>
+    <color name="frameAnimationsLight">#B39DDB</color>
+    <color name="morphing">#F44336</color>
+    <color name="morphingLight">#EF9A9A</color>
 </resources>
