@@ -6,4 +6,9 @@
     <string name="transitions">Transitions</string>
     <string name="frame_animations">Frame Animations</string>
     <string name="morphing">Morphing</string>
+
+    <string name="toolbar_transition_name">toolbar transition</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
