@@ -1,13 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="theo.animationsdemo.ui.activity.AnimatorFragment">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="theo.animationsdemo.ui.activity.AnimatorFragment"
+    android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_property_animator"
+        android:id="@+id/view_property_animator"
+        android:layout_marginTop="@dimen/default_margin" />
 
-</FrameLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/object_animator"
+        android:id="@+id/object_animator"
+        android:layout_marginTop="@dimen/default_margin" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/value_animator"
+        android:id="@+id/value_animator"
+        android:layout_marginTop="@dimen/default_margin" />
+</LinearLayout>
