@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_animators) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_transitions) {
 
         } else if (id == R.id.nav_frame_animations) {

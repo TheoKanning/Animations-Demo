@@ -11,9 +11,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Animator Fragment-->
-    <string name="view_property_animator">ViewPropertyAnimator</string>
-    <string name="object_animator">ObjectAnimator</string>
-    <string name="value_animator">ValueAnimator</string>
+    <string name="alpha">Alpha</string>
+    <string name="color">Color</string>
+    <string name="size">Size</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

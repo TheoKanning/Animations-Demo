@@ -1,16 +1,17 @@
 package theo.animationsdemo.ui.fragment;
 
 
-import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.view.ViewTreeObserver;
 
 import java.util.Random;
 
@@ -22,53 +23,70 @@ import theo.animationsdemo.R;
 
 public class AnimatorFragment extends Fragment {
 
-    @Bind(R.id.view_property_animator)
-    Button viewProperty;
-
-    @Bind(R.id.object_animator)
-    Button object;
-
-    @Bind(R.id.value_animator)
-    Button value;
+    @Bind(R.id.animator_view)
+    View animatorView;
 
     @OnClick(R.id.view_property_animator)
-    public void toggleButtonAlpha() {
-        viewProperty.animate()
-                .alpha(0)
-                .setListener(new Animator.AnimatorListener() {
-                    @Override
-                    public void onAnimationStart(Animator animation) {
+    public void toggleViewAlpha() {
 
-                    }
+        float alpha;
+        if (viewTransparent) {
+            alpha = 1;
+        } else {
+            alpha = 0;
+        }
+        viewTransparent = !viewTransparent;
 
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        viewProperty.animate()
-                                .alpha(1);
-                    }
-
-                    @Override
-                    public void onAnimationCancel(Animator animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animator animation) {
-
-                    }
-                });
+        animatorView.animate().alpha(alpha);
     }
 
+    /**
+     * Changes object button to random color using ObjectAnimator.
+     */
     @OnClick(R.id.object_animator)
-    public void changeButtonColor(){
+    public void changeViewColor() {
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        ObjectAnimator colorAnimator = ObjectAnimator.ofInt(object, "BackgroundColor", color);
+        ObjectAnimator colorAnimator = ObjectAnimator.ofInt(animatorView, "BackgroundColor", color);
         colorAnimator.setEvaluator(new ArgbEvaluator());
         colorAnimator.start();
     }
 
-    private boolean valueFillParent = false;
+    /**
+     * Changes view height and width to random values using ValueAnimator.
+     */
+    @OnClick(R.id.value_animator)
+    public void changeViewHeight() {
+        Random random = new Random();
+        int height = random.nextInt(maxViewHeight);
+        int width = random.nextInt(maxViewWidth);
+        ValueAnimator heightAnimator = ValueAnimator.ofInt(animatorView.getHeight(), height);
+        heightAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                animatorView.getLayoutParams().height = (Integer) animation.getAnimatedValue();
+                animatorView.requestLayout();
+            }
+        });
+
+        ValueAnimator widthAnimator = ValueAnimator.ofInt(animatorView.getWidth(), width);
+        widthAnimator.setStartDelay(50);
+        widthAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                animatorView.getLayoutParams().width = (Integer) animation.getAnimatedValue();
+                animatorView.requestLayout();
+            }
+        });
+
+        AnimatorSet set = new AnimatorSet();
+        set.playTogether(heightAnimator, widthAnimator);
+        set.start();
+    }
+
+    private boolean viewTransparent = false;
+    private int maxViewHeight;
+    private int maxViewWidth;
 
 
     @Override
@@ -82,5 +100,22 @@ public class AnimatorFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+        getActivity().setTitle(R.string.animators);
+
+        /**
+         * Get initial dimensions of animatedView. Setting an OnPreDrawListener is the best way to
+         * get view dimensions as soon as possible, which is very helpful when initializing
+         * transitions.
+         */
+        animatorView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                animatorView.getViewTreeObserver().removeOnPreDrawListener(this);
+                maxViewHeight = animatorView.getHeight();
+                maxViewWidth = animatorView.getWidth();
+
+                return true;
+            }
+        });
     }
 }

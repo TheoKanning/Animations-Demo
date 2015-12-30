@@ -5,27 +5,40 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context="theo.animationsdemo.ui.activity.AnimatorFragment"
-    android:paddingLeft="@dimen/default_margin"
-    android:paddingRight="@dimen/default_margin">
+    android:padding="@dimen/default_margin">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/view_property_animator"
-        android:id="@+id/view_property_animator"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alpha"
+            android:id="@+id/view_property_animator"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color"
+            android:id="@+id/object_animator"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size"
+            android:id="@+id/value_animator"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/animator_view"
+        android:background="@color/transitions"
         android:layout_marginTop="@dimen/default_margin" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/object_animator"
-        android:id="@+id/object_animator"
-        android:layout_marginTop="@dimen/default_margin" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/value_animator"
-        android:id="@+id/value_animator"
-        android:layout_marginTop="@dimen/default_margin" />
 </LinearLayout>
