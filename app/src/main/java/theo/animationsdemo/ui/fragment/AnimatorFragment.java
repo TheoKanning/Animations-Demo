@@ -41,7 +41,8 @@ public class AnimatorFragment extends Fragment {
     }
 
     /**
-     * Changes object button to random color using ObjectAnimator.
+     * Changes object button to random color using ObjectAnimator. ArgbEvaluator gives smooth
+     * interpolation between colors.
      */
     @OnClick(R.id.object_animator)
     public void changeViewColor() {
@@ -70,7 +71,7 @@ public class AnimatorFragment extends Fragment {
         });
 
         ValueAnimator widthAnimator = ValueAnimator.ofInt(animatorView.getWidth(), width);
-        widthAnimator.setStartDelay(50);
+        widthAnimator.setStartDelay(100);
         widthAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

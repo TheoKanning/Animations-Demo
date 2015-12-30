@@ -34,11 +34,17 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/animator_view"
-        android:background="@color/transitions"
-        android:layout_marginTop="@dimen/default_margin" />
+        android:layout_marginTop="@dimen/default_margin"
+        android:gravity="center_vertical|center_horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/animator_view"
+            android:background="@color/transitions" />
+    </RelativeLayout>
 
 </LinearLayout>
