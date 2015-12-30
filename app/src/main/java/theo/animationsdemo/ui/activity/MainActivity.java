@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import theo.animationsdemo.R;
 import theo.animationsdemo.ui.fragment.AnimatorFragment;
+import theo.animationsdemo.ui.fragment.FrameAnimationFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,11 +54,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_animators) {
-
+            setFragment(new AnimatorFragment());
         } else if (id == R.id.nav_transitions) {
 
         } else if (id == R.id.nav_frame_animations) {
-
+            setFragment(new FrameAnimationFragment());
         } else if (id == R.id.nav_morphing) {
 
         }
