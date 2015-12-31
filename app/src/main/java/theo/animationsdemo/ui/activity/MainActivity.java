@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import theo.animationsdemo.R;
 import theo.animationsdemo.ui.fragment.AnimatorFragment;
 import theo.animationsdemo.ui.fragment.FrameAnimationFragment;
+import theo.animationsdemo.ui.fragment.MorphingFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_frame_animations) {
             setFragment(new FrameAnimationFragment());
         } else if (id == R.id.nav_morphing) {
-
+            setFragment(new MorphingFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
