@@ -2,6 +2,6 @@
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/star" >
     <target
-        android:name="v"
+        android:name="@string/star_square_path_name"
         android:animation="@animator/star_to_square_morph" />
 </animated-vector>

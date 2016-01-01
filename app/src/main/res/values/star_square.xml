@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="path_star">32mM 25.0,1.0 l 6.0,17.0 l 18.0,0.0 l -14.0,11.0 l 5.0,17.0 l -15.0,-10.0 l -15.0,10.0 l 5.0,-17.0 l -14.0,-11.0 l 18.0,0.0 L 25.0,1.0</string>
+    <string name="path_square">33mM 0.0,0.0 l 0.0,0.0 l 0.0,0.0 l 0.0,0.0 l 0.0,0.0 l 0.0,0.0 l 0.0,0.0 l 0.0,48.0 l 51.0,0.0 l 0.0,-48.0 L 0.0,0.0</string>
+
+    <color name="fill_color">#444</color>
+
+    <string name="star_square_path_name">path</string>
+
+    <dimen name="star_square_width">128dp</dimen>
+    <dimen name="star_square_height">128dp</dimen>
+
+    <integer name="star_square_viewport_height">48</integer>
+    <integer name="star_square_viewport_width">51</integer>
+
+    <integer name="star_square_duration">1000</integer>
+</resources>

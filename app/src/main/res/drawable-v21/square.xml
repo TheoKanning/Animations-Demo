@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/star_square_width"
+    android:height="@dimen/star_square_height"
+    android:viewportHeight="@integer/star_square_viewport_height"
+    android:viewportWidth="@integer/star_square_viewport_width">
+
+    <path
+        android:name="@string/star_square_path_name"
+        android:fillColor="@color/fill_color"
+        android:pathData="@string/path_square" />
+
+</vector>
