@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="path_plus_small_vertical">M14.0132,0.212 L14.013,8</string>
+    <string name="path_plus_large_vertical">M14.013,8 L14.0132,27.787</string>
+    <string name="path_plus_horizontal">M0,14.437 L28,14.4375</string>
+    <string name="path_plus_horizontal_gone">M0,14.437 L0,14.437</string>
+
+    <string name="path_check_small">M2,10.70640746 L9.84484711,23.9</string>
+    <string name="path_check_large">M9.5,22.5 L31,6.5</string>
+
+    <string name="path_name_small_vertical">small</string>
+    <string name="path_name_large_vertical">large</string>
+    <string name="path_name_horizontal">horizontal</string>
+
+    <integer name="check_plus_duration">300</integer>
+    <integer name="check_plus_stroke_width">3</integer>
+    <color name="check_plus_fill_color">#444</color>
+
+    <dimen name="check_plus_height">128dp</dimen>
+    <dimen name="check_plus_width">128dp</dimen>
+    <integer name="check_plus_viewport_height">32</integer>
+    <integer name="check_plus_viewport_width">32</integer>
+
+
+</resources>

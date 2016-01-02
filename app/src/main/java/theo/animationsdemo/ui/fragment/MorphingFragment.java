@@ -16,24 +16,42 @@ import theo.animationsdemo.R;
 
 public class MorphingFragment extends Fragment {
 
-    @Bind(R.id.morph_button)
-    ImageButton morphButton;
+    @Bind(R.id.star_button)
+    ImageButton starButton;
 
-    @OnClick(R.id.morph_button)
-    public void morph(){
+    @OnClick(R.id.star_button)
+    public void morphStarButton(){
         if(star) {
-            morphButton.setImageResource(R.drawable.star_to_square);
+            starButton.setImageResource(R.drawable.star_to_square);
         } else {
-            morphButton.setImageResource(R.drawable.square_to_star);
+            starButton.setImageResource(R.drawable.square_to_star);
         }
 
-        Animatable animatable = (Animatable) morphButton.getDrawable();
+        Animatable animatable = (Animatable) starButton.getDrawable();
         animatable.start();
 
         star = !star;
     }
 
+    @Bind(R.id.plus_button)
+    ImageButton plusButton;
+
+    @OnClick(R.id.plus_button)
+    public void morphPlusButton(){
+        if(plus) {
+            plusButton.setImageResource(R.drawable.plus_to_check);
+        } else {
+            plusButton.setImageResource(R.drawable.check_to_plus);
+        }
+
+        Animatable animatable = (Animatable) plusButton.getDrawable();
+        animatable.start();
+
+        plus = !plus;
+    }
+
     private boolean star = true;
+    private boolean plus = true;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

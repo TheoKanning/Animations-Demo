@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="@integer/check_plus_duration"
+        android:propertyName="pathData"
+        android:valueFrom="@string/path_plus_large_vertical"
+        android:valueTo="@string/path_check_large"
+        android:valueType="pathType" />
+</set>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/plus">
+    <target
+        android:name="@string/path_name_small_vertical"
+        android:animation="@animator/check_to_plus_large" />
+    <target
+        android:name="@string/path_name_large_vertical"
+        android:animation="@animator/check_to_plus_small" />
+    <target
+        android:name="@string/path_name_horizontal"
+        android:animation="@animator/check_to_plus_horizontal" />
+</animated-vector>
