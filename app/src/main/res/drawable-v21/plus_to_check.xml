@@ -3,10 +3,10 @@
     android:drawable="@drawable/plus">
     <target
         android:name="@string/path_name_small_vertical"
-        android:animation="@animator/plus_to_check_large" />
+        android:animation="@animator/plus_to_check_small" />
     <target
         android:name="@string/path_name_large_vertical"
-        android:animation="@animator/plus_to_check_small" />
+        android:animation="@animator/plus_to_check_large" />
     <target
         android:name="@string/path_name_horizontal"
         android:animation="@animator/plus_to_check_horizontal" />
